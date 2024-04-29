@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// todo add mobile version
+// todo set a tags href
+
 const Home = () => {
     return (
         <main className='container'>

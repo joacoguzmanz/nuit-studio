@@ -59,11 +59,11 @@ li {
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: vars.$ns-white;
+  color: vars.$ns-black;
   background: vars.$ns-yellow;
 }
 
 ::selection {
-  color: vars.$ns-white;
+  color: vars.$ns-black;
   background: vars.$ns-yellow;
 }
