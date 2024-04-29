@@ -1,0 +1,101 @@
+@use "variables" as vars;
+@use "mixins" as mixs;
+
+.container {
+    display: flex;
+
+    @include mixs.desktop {
+        height: 100vh;
+    }
+
+    &-left, &-right {
+        flex: 1;
+        height: 100%;
+    }
+
+    &-left {
+        display: flex;
+
+        @include mixs.desktop {
+            padding: 4rem 0 2rem;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content-top {
+            @include mixs.desktop {
+                margin-left: 60px;
+            }
+
+            a {
+                font-size: 24px;
+                font-weight: vars.$ns-font-medium;
+            }
+        }
+
+        .content-body {
+            @include mixs.desktop {
+                margin-left: 60px;
+                margin-bottom: 120px;
+            }
+
+            .description {
+                @include mixs.desktop {
+                    margin-bottom: 80px;
+                }
+
+                h1 {
+                    font-weight: vars.$ns-font-semibold;
+                    line-height: 1.1;
+
+                    @include mixs.desktop {
+                        font-size: 42px;
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                p {
+                    font-weight: vars.$ns-font-regular;
+                    line-height: 1.5;
+                    font-size: 1.125rem;
+
+                    @include mixs.desktop {
+                        max-width: 65%;
+                    }
+                }
+            }
+
+            .contact-container {
+                @include mixs.desktop {
+                    display: flex;
+                    gap: 60px;
+                }
+
+                .contact-title, .contact-text {
+                    @include mixs.desktop {
+                        font-size: 24px;
+                        font-weight: vars.$ns-font-medium;
+                    }
+                }
+
+                .contact-title {
+                    color: vars.$ns-grey;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .content-bottom {
+            display: flex;
+            gap: 30px;
+
+            @include mixs.desktop {
+                margin-left: 60px;
+            }
+        }
+    }
+
+    &-right {
+        position: relative;
+    }
+}
