@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// todo add mobile version
-// todo set a tags href
-
 const Home = () => {
     return (
         <main className='container'>
@@ -21,11 +18,13 @@ const Home = () => {
                     <div className="contact-container">
                         <div className="mail-contact">
                             <h2 className="contact-title">Dejanos un correo</h2>
-                            <a href="mailto:contact@gmail.com" className="contact-text">hola@nuitstudio.com</a>
+                            <a href="mailto:hola@nuitstudio.com" className="contact-text">hola@nuitstudio.com</a>
                         </div>
                         <div className="phone-contact">
                             <h2 className="contact-title">Envianos un mensaje</h2>
-                            <a href="#" className="contact-text">+34 692 95 55 04</a>
+                            <a href="https://wa.me/34692955504?text=Hola!%20"
+                               target="_blank"
+                               className="contact-text">+34 692 95 55 04</a>
                         </div>
                     </div>
                 </div>
@@ -36,7 +35,7 @@ const Home = () => {
             </div>
 
             <div className='container-right'>
-                <Image src={'/soon-image.jpg'} alt={'Galaxy image'} fill={true} objectFit={'cover'}/>
+                <Image src={'/soon-image.jpg'} alt={'Galaxy image'} fill={true} style={{objectFit: 'cover'}} priority={true}/>
             </div>
         </main>
     );
