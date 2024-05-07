@@ -35,7 +35,8 @@ const Home = () => {
             </div>
 
             <div className='container-right'>
-                <Image src={'/soon-image.jpg'} alt={'Galaxy image'} fill={true} style={{objectFit: 'cover'}} priority={true}/>
+                <Image src={'/soon-image.jpg'} alt={'Galaxy image'} fill={true} style={{objectFit: 'cover'}}
+                       sizes='(max-width: 768px) 0px, (max-width: 1280px) 50vw, 33vw' priority={true}/>
             </div>
         </main>
     );

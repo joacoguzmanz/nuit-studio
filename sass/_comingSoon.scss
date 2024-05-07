@@ -7,7 +7,7 @@
     padding: 0 1.25rem;
     height: 100vh;
 
-    @include mixs.desktop {
+    @include mixs.tablet {
         padding: 0;
         flex-direction: row;
         height: 100vh;
@@ -130,7 +130,7 @@
         position: relative;
         height: 250px;
 
-        @include mixs.desktop {
+        @include mixs.tablet {
             display: block;
             height: 100%;
         }
